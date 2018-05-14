@@ -1,0 +1,2 @@
+blastp -outfmt 5 -query 10.fa.txt.pfa -db 45.fa.txt -out 10_45_blastp
+blastp -outfmt 5 -query 10.fa.txt.pfa -db 48.fa.txt -out 10_48_blastp
