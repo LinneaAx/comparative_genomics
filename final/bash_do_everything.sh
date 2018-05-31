@@ -11,6 +11,12 @@ echo $file
 python2 -c "import grand_finale; grand_finale.compute_aa('$file')"
 done
 
+for file in *.fasta
+do 
+echo $file
+python2 -c "import grand_finale; grand_finale.compute_diaa('$file')"
+done
+
 python2 distance_matrix.py 03.fa.txt 28.fa.txt 43.fa.txt 48.fa.txt 50.fa.txt > distance
 cat distance
 tr -s " " " " < distance > distance1

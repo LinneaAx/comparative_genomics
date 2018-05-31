@@ -42,7 +42,7 @@ def compute_diaa(input_fasta):
     
     trans = trans_aa(input_fasta)
     temp_dict = defaultdict(int)
-    with open(input_fasta + di_aa, 'w') as w:
+    with open(input_fasta + 'di_aa', 'w') as w:
         for line in trans:   
             for item in range(len(trans)):
                 temp_dict[trans[item:item+2]] +=1
@@ -50,6 +50,7 @@ def compute_diaa(input_fasta):
                     total = sum(temp_dict.values())
                     result = float(v)/total
                     w.write(k+' : '+ str(result)+'\n')
+                    break
                     
 if __name__ == '__main__':
     input_fasta = sys.argv[1]
